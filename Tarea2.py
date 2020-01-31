@@ -17,6 +17,6 @@ class TestPension(unittest.TestCase):
     def test_PensionHombre70Anos479SemanasRotacion(self):
         p = Persona()
         p.setEdad(70)
-        p.setSemanasRotacion(80)
+        p.setSemanasRotacion(479)
         p.tieneDerechoPension()
 
