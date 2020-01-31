@@ -16,4 +16,4 @@ class Persona():
         self.genero = genero
     
     def tieneDerechoPension(self):
-        return True
+        return p.semanas >= 750
