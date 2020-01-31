@@ -1,6 +1,8 @@
 class Persona():
     edad = 0
     semanas = 10
+    genero = ""
+
     #Metodo para asignar la edad a la persona
     def setEdad(self,edad):
         self.edad = edad

@@ -12,16 +12,24 @@ class TestPension(unittest.TestCase):
         p = Persona()
         p.tieneDerechoPension()
 
-    #Caso de Prueba para verificar si un hombre de 70 anos y 479 semanas
+    #Caso de Prueba para verificar si un hombre de 70 anos y 750 semanas
     #rotacion tiene pension
-    def test_PensionHombre70Anos479SemanasRotacion(self):
+    def test_PensionHombre70Anos750SemanasRotacion(self):
         p = Persona()
         p.setEdad(70)
-        p.setSemanasRotacion(479)
+        p.setSemanasRotacion(750)
         p.tieneDerechoPension()
         p.setGenero("Hombre")
-        self.assertEqual("Hombre",p.setGenero("Hombre"))
+        p.tieneDerechoPension()
 
-
+    #Caso de Prueba para verificar si un Hombre de 70 anos y 749 semanas
+    #rotacion tiene pension
+    def test_PensionHombre70Anos749SemanasRotacion(self):
+        p = Persona()
+        p.setEdad(70)
+        p.setSemanasRotacion(749)
+        p.tieneDerechoPension()
+        p.setGenero("Hombre")
+        p.tieneDerechoPension()
 
 
