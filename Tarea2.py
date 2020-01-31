@@ -7,3 +7,8 @@ class TestPension(unittest.TestCase):
         persona = Persona()
         self.assertIsInstance(persona,Persona)
 
+    #Caso de Prueba para ver si una persona generica tiene pension
+    def test_PensionVejezPersonaGenerica(self):
+        p = Persona()
+        p.tieneDerechoPension()
+
