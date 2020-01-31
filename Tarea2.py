@@ -40,8 +40,10 @@ class TestPension(unittest.TestCase):
         self.p.setGenero("Hombre")
         self.persona.setGenero("Mujer")
 
-        self.p.edadMinimaParaOptarPorPension(self.p.genero)
+        edadH = self.p.edadMinimaParaOptarPorPension(self.p.genero)
+        self.assertIsInstance(edadH,int)
 
-        self.persona.edadMinimaParaOptarPorPension(self.persona.genero)
+        edadM = self.persona.edadMinimaParaOptarPorPension(self.persona.genero)
+        self.assertIsInstance(edadM,int)
 
 
