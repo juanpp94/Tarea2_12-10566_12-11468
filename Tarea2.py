@@ -19,4 +19,9 @@ class TestPension(unittest.TestCase):
         p.setEdad(70)
         p.setSemanasRotacion(479)
         p.tieneDerechoPension()
+        p.setGenero("Hombre")
+        self.assertEqual("Hombre",p.setGenero())
+
+
+
 

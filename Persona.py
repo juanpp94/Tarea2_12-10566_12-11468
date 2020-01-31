@@ -10,8 +10,6 @@ class Persona():
     def setSemanasRotacion(self,semanas):
         self.semanas = semanas
 
-
-
     def setGenero(self):
         return True
     
