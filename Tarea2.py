@@ -1,5 +1,5 @@
 import unittest
-
+from Persona import Persona
 class TestPension(unittest.TestCase):
 
     #Caso de Prueba para crear una instancia de la clase Persona
