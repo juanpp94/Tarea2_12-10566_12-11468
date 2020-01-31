@@ -1,5 +1,6 @@
 import unittest
 from Persona import Persona
+
 class TestPension(unittest.TestCase):
 
     #SetUp para crear una instancia de persona y no repetir codigo (refactoring)
