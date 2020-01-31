@@ -31,5 +31,17 @@ class TestPension(unittest.TestCase):
         p.tieneDerechoPension()
         p.setGenero("Hombre")
         p.tieneDerechoPension()
+    
+    #Hallar la edad minima para que una persona reciba pension
+    #Prueba para hombre y mujer
+    def test_EdadMinimaParPensionPersonaGenerica(self):
+        p1 = Persona()
+        p2 = Persona()
+        p1.setGenero("Hombre")
+        p2.setGenero("Mujer")
+
+        p1.edadMinimaParaOptarPorPension(p1.genero)
+
+        p2.edadMinimaParaOptarPorPension(p2.genero)
 
 

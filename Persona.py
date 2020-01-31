@@ -14,9 +14,6 @@ class Persona():
 
     def setGenero(self,genero):
         self.genero = genero
-
-    def edadMinimaParaOptarPorPension(self,genero):
-        return genero
     
     def tieneDerechoPension(self):
-        return p.semanas >= 750
+        return self.semanas >= 750
