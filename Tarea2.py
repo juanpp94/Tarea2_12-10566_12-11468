@@ -96,4 +96,17 @@ class TestPension(unittest.TestCase):
 
         puedeOptar = self.persona.tieneDerechoPension()
         self.assertTrue(puedeOptar)
+
+    #Caso de Prueba: Verifica si un hombre que tenga 59 anos y 749 horas recorridas
+    # y cumpla 60 anos manana es apto para recibir pension.
+        self.p.setGenero = "Hombre"
+        fechaNacimientoH = date(1960,2,1,00,00,00)
+        fechaActual = datetime.now()
+        edadH = fechaActual - fechaNacimientoH
+        self.p.edad = edadH
+
+        puedeOptar = self.p.tieneDerechoPension()
+        self.assertTrue(puedeOptar)
+
+       
         
