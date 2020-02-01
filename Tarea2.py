@@ -106,7 +106,7 @@ class TestPension(unittest.TestCase):
         self.p.edad = edadH
 
         puedeOptar = self.p.tieneDerechoPension()
-        self.assertTrue(puedeOptar)
+        self.assertFalse(puedeOptar)
 
        
         
