@@ -57,5 +57,24 @@ class TestPension(unittest.TestCase):
         fecha = datetime(1994, 11, 22, 10, 15, 00, 00000)
         self.p.setFechaNacimiento(fecha)
         self.persona.setGenero("Mujer")
+        self.persona.setFechaNacimiento(fecha)
+
+    #Caso de Prueba para verificar si una persona tiene la edad minima para
+    #optar por la pension
+    def test_PersonaTieneEdadMinimaParaOptarPension(self):
+        self.p.setGenero = "Hombre"
+        fechaNacimientoH = date(1995,11,22,10,15,00)
+        fechaActual = datetime.now()
+        edadH = fechaActual - fechaNacimientoH
+        self.p.edad = edadH
+
+        self.p.tieneEdadParaOptarPension(self.p.genero,self.p.edad)
+
+        self.persona.setGenero = "Mujer"
+        fechaNacimientoM = date(1995,11,22,10,15,00)
+        fechaActual = datetime.now()
+        edadM = fechaActual - fechaNacimientoM
+        self.persona.edad = edadM
+        self.persona.tieneEdadParaOptarPension(self.persona.genero,self.persona.edad)
 
 
