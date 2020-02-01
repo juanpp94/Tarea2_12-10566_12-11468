@@ -77,4 +77,14 @@ class TestPension(unittest.TestCase):
         self.persona.edad = edadM
         puedeOptar = self.persona.tieneEdadParaOptarPension(self.persona.genero,self.persona.edad)
 
+    #Caso de Prueba: Verifica si una persona tiene la cantidad de semanas de rotacion
+    #y la edad minima para cobrar pension
+        self.p.setGenero = "Hombre"
+        fechaNacimientoH = date(1960,12,6,10,15,00)
+        fechaActual = datetime.now()
+        edadH = fechaActual - fechaNacimientoH
+        self.p.edad = edadH
 
+        puedeOptar = self.persona.tieneDerechoPension()
+        self.assertTrue(puedeOptar)
+        
