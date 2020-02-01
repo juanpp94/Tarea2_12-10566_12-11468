@@ -33,6 +33,20 @@ class Persona():
             return 60
         else:
             return 55
+    
+    #Metodo para determinar si una persona tiene la edad minima para 
+    #optar por la pension
+    def tieneEdadParaOptarPension(self,genero,edad):
+        if genero == "hombre":
+            if edad >= self.edadMinimaParaOptarPorPension(genero):
+                return True
+            else:
+                return False
+        else:
+            if edad >= self.edadMinimaParaOptarPorPension(genero):
+                return True
+            else:
+                return False
 
     
     #Metodo para determinar si tiene derecho a pension segun la
