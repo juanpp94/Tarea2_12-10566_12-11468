@@ -85,6 +85,15 @@ class TestPension(unittest.TestCase):
         edadH = fechaActual - fechaNacimientoH
         self.p.edad = edadH
 
+        puedeOptar = self.p.tieneDerechoPension()
+        self.assertFalse(puedeOptar)
+
+        self.persona.setGenero = "Mujer"
+        fechaNacimientoM = date(1963,10,9,10,15,00)
+        fechaActual = datetime.now()
+        edadM = fechaActual - fechaNacimientoH
+        self.persona.edad = edadM
+
         puedeOptar = self.persona.tieneDerechoPension()
         self.assertTrue(puedeOptar)
         
