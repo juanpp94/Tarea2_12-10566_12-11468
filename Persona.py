@@ -52,4 +52,5 @@ class Persona():
     #Metodo para determinar si tiene derecho a pension segun la
     #cantidad de semanas de rotacion
     def tieneDerechoPension(self):
-        return self.semanas >= 750 & self.tieneEdadParaOptarPension(self.genero,self.edad)
+        tienEdadParaPension = self.tieneEdadParaOptarPension(self.genero,self.edad)
+        return self.semanas >= 750 & tienEdadParaPension
