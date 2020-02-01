@@ -1,5 +1,7 @@
 import unittest
 from Persona import Persona
+from datetime import date
+from datetime import datetime
 
 class TestPension(unittest.TestCase):
 
@@ -52,7 +54,8 @@ class TestPension(unittest.TestCase):
     # de su fecha de nacimiento
     def test_PensionPersonaSegunFechaNacimiento(self):
         self.p.setGenero("Hombre")
-        self.p.setFechaNacimiento()
+        fecha = datetime(1994, 11, 22, 10, 15, 00, 00000)
+        self.p.setFechaNacimiento(fecha)
         self.persona.setGenero("Mujer")
 
 

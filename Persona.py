@@ -21,6 +21,11 @@ class Persona():
     def setGenero(self,genero):
         self.genero = genero
 
+    #Metodo para asignar fecha de nacimiento de una persona
+    def setFechaNacimiento(self,fechaNacimiento):
+        self.fechaNacimiento = fechaNacimiento
+
+
     #Metodo para determinar la edad minima de una persona
     #segun su genero para que pueda optar por pension
     def edadMinimaParaOptarPorPension(self,genero):
